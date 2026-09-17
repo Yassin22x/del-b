@@ -32,5 +32,6 @@ public class Course
             return;
 
             Students.Remove(student);  // Tar bort eleven från kursens lists
+            student.Leave(this);  // Anropar studenten så att den också tar bort kursen (tvåvägskoppling)
     }
 }
