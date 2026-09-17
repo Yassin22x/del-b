@@ -15,7 +15,7 @@ public class Student
     public override string ToString()  // Gör så att elevens namn visas när vi skriver ut eleven på skärmen
     {
         return Name;
-
+    }
 public void Join(Course course) // Metod för att gå med i en kurs 
 { 
  
