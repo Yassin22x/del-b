@@ -16,5 +16,13 @@ public class Course
     {
         return Name;
     }
-    
+    public void Enroll(Student student)  // Metod för att skicka in en elev på kursen
+    {
+        if (student == null|| Students.Contains(student))  // Om eleven inte finns eller redan går kursen, så gör vi ingenting
+            return;
+
+            Students.Add(student);  // Sparar eleven i kursens egna lista
+            student.Join(this);  // Anropar studenten så att den också lägger till kursen i sin lista (tvåvägskoppling)
+            
+    }
 }
