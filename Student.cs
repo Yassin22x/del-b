@@ -16,5 +16,14 @@ public class Student
     {
         return Name;
 
-
+public void Join(Course course) // Metod för att gå med i en kurs 
+{ 
+ 
+if (course == null || Courses.Contains(course)) // Om kursen inte finns, eller om eleven redan går i den, så gör vi ingenting 
+ 
+return; 
+ 
+Courses.Add(course); // Sparar kursen i studentens egna lista 
+course.Enroll(this); // Anropar kursen så att den också lägger till studenten i sin lita (tvåvägskoppling) 
+}
     }
