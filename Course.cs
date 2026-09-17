@@ -23,6 +23,14 @@ public class Course
 
             Students.Add(student);  // Sparar eleven i kursens egna lista
             student.Join(this);  // Anropar studenten så att den också lägger till kursen i sin lista (tvåvägskoppling)
-            
+
+    }
+
+    public void Remove(Student student)  // Metod för att ta bort en elev från kursen
+    {
+        if (student == null || !Students.Contains(student))  // Om eleven inte finns eller inte går kursen, så gör ingenting
+            return;
+
+            Students.Remove(student);  // Tar bort eleven från kursens lists
     }
 }

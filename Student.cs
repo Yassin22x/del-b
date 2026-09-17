@@ -26,4 +26,6 @@ return;
 Courses.Add(course); // Sparar kursen i studentens egna lista 
 course.Enroll(this); // Anropar kursen så att den också lägger till studenten i sin lita (tvåvägskoppling) 
 }
+
+
     }
