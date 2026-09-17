@@ -33,5 +33,24 @@ return;
 Courses.Remove(course); // Tar bort kursen från elevens lista 
 course.Remove(this); // Säger också till kursen att ta bort den här eleven 
 } 
+public void Schedule() // Skriver ut alla kurser som eleven går på skärmen 
+{  
+Console.WriteLine($"Schema för {Name}:"); 
+if (Courses.Count == 0) 
+{ 
+Console.WriteLine(" Inga kurser registrerade."); 
+return; 
+} 
+ 
+foreach (var course in Courses) 
+{ 
+Console.WriteLine($" - {course.Name}"); 
+} 
 
-    }
+}
+
+}
+
+ 
+ 
+    
