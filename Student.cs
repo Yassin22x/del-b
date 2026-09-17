@@ -26,6 +26,12 @@ return;
 Courses.Add(course); // Sparar kursen i studentens egna lista 
 course.Enroll(this); // Anropar kursen så att den också lägger till studenten i sin lita (tvåvägskoppling) 
 }
-
+public void Leave(Course course) // Metod för att gå ur en kurs 
+{ 
+if (course == null || !Courses.Contains(course)) // Om kursen inte finns, eller om eleven inte går den, så gör vi ingenting 
+return; 
+Courses.Remove(course); // Tar bort kursen från elevens lista 
+course.Remove(this); // Säger också till kursen att ta bort den här eleven 
+} 
 
     }
